@@ -39,18 +39,18 @@
         android:layout_height="wrap_content"
         android:text="@string/score_answers"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/required_percentage"
+        app:layout_constraintBottom_toTopOf="@id/tv_required_percentage"
         app:layout_constraintTop_toBottomOf="@id/tv_required_answer"
         app:layout_constraintStart_toStartOf="@id/tv_required_answer"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answer"/>
 
     <TextView
-        android:id="@+id/required_percentage"
+        android:id="@+id/tv_required_percentage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/score_percentage"
+        app:layout_constraintBottom_toTopOf="@id/tv_score_percentage"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answer"
         app:layout_constraintStart_toStartOf="@id/tv_required_answer"
         app:layout_constraintTop_toBottomOf="@id/tv_score_answers"
@@ -59,7 +59,7 @@
         />
 
     <TextView
-        android:id="@+id/score_percentage"
+        android:id="@+id/tv_score_percentage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -68,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tv_required_answer"
         app:layout_constraintStart_toStartOf="@id/tv_required_answer"
-        app:layout_constraintTop_toBottomOf="@id/required_percentage"
+        app:layout_constraintTop_toBottomOf="@id/tv_required_percentage"
         />
     
     <Button
