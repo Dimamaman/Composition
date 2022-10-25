@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE
+import androidx.navigation.fragment.findNavController
 import com.example.composition.R
 import com.example.composition.databinding.FragmentGameFinishedBinding
 import com.example.composition.domain.entity.GameResult
@@ -34,12 +35,12 @@ class GameFinishedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindViews()
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
-            object : OnBackPressedCallback(true) {
-                override fun handleOnBackPressed() {
-                    retryGame()
-                }
-            })
+//        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
+//            object : OnBackPressedCallback(true) {
+//                override fun handleOnBackPressed() {
+//                    retryGame()
+//                }
+//            })
         binding.buttonRetry.setOnClickListener {
             retryGame()
         }
@@ -89,10 +90,7 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun retryGame() {
-        requireActivity().supportFragmentManager.popBackStack(
-            GameFragment.GAMEFRAGMENT,
-            POP_BACK_STACK_INCLUSIVE
-        )
+        findNavController().popBackStack()
     }
 
     private fun parseNumber() {
@@ -102,7 +100,7 @@ class GameFinishedFragment : Fragment() {
     }
 
     companion object {
-        private const val NUMBER = "number"
+        const val NUMBER = "number"
 
         fun newInstance(gameResult: GameResult): GameFinishedFragment {
             return GameFinishedFragment().apply {
