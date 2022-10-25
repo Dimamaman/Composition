@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".presentation.ChooseLevelFragment">
-
-    <TextView
-        android:id="@+id/tv_title"
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/choose_level"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.ChooseLevelFragment">
 
-    <Button
-        android:id="@+id/button_level_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:text="@string/testvoy"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/choose_level"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button_level_easy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:text="@string/sredniy"
-        android:backgroundTint="#3F9F38"/>
+        <Button
+            android:id="@+id/button_level_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/testvoy" />
 
-    <Button
-        android:id="@+id/button_level_normal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:text="@string/normal"
-        android:backgroundTint="#9EF6C056"/>
+        <Button
+            android:id="@+id/button_level_easy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#3F9F38"
+            android:text="@string/sredniy" />
 
-
-    <Button
-        android:id="@+id/button_level_hard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:text="@string/hard"
-        android:backgroundTint="#F6053D"/>
+        <Button
+            android:id="@+id/button_level_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#9EF6C056"
+            android:text="@string/normal" />
 
 
-
-</LinearLayout>
+        <Button
+            android:id="@+id/button_level_hard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="#F6053D"
+            android:text="@string/hard" />
+    </LinearLayout>
+</layout>
